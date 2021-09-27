@@ -1,17 +1,48 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# **Exploring US Bike Share Data**
+In this project, we use Python to explore data related to the bike share systems of three major cities - Chicago, New York City, and Washington. I wrote code to import the data and compute descriptive statistics. We run a script that takes in raw input to create an interactive experience in the terminal.
 
-### Date created
-Include the date you created this project and README file.
+# **Datasets**[](https://)
+Randomly selected data for the first six months of 2017 are provided for all three cities. The data files contain the same core six columns:
 
-### Project Title
-Replace the Project Title
+* Start Time (e.g., 2017-01-01 00:07:57)
 
-### Description
-Describe what your project is about and what it does
+* End Time (e.g., 2017-01-01 00:20:53)
 
-### Files used
-Include the files used
+* Trip Duration (in seconds - e.g., 776)
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+* Start Station (e.g., Broadway & Barry Ave)
 
+* End Station (e.g., Sedgwick St & North Ave)
+
+* User Type (Subscriber or Customer)
+
+The Chicago and New York City files also provide the additional following two columns:
+
+* Gender
+
+* Birth Year
+
+# **Files**[](https://)
+Data used in this project is provided by [Motivate](https://www.motivateco.com/), a national bike share system provider. In order to run the program, the following files are needed.
+
+* chicago.csv
+
+* new_york_city.csv
+
+* washington.csv
+
+# **Software**[](https://)
+The program was written using:
+
+* Python 3
+
+* NumPy and Pandas were installed using Anaconda
+
+
+# **Resources**[](https://)
+
+* The Python Standard Library
+
+* Pandas Documentation
+
+* Stack Overflow
