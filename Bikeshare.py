@@ -197,38 +197,21 @@ def display_data(df):
             more_data = input('\nWould you like to see 5 more rows of data? yes or no:\n').lower()
             if more_data != 'yes':
                 break
-
 def main():
     while True:
-        click.clear()
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        mark_place = 0
-        while True:
-            select_data = choice("\nPlease select the information you would "
-                                 "like to obtain.\n\n [ts] Time Stats\n [ss] "
-                                 "Station Stats\n [tds] Trip Duration Stats\n "
-                                 "[us] User Stats\n [rd] Display Raw Data\n "
-                                 "[r] Restart\n\n>",
-                                 ('ts', 'ss', 'tds', 'us', 'rd', 'r'))
-            click.clear()
-            if select_data == 'ts':
-                time_stats(df)
-            elif select_data == 'ss':
-                station_stats(df)
-            elif select_data == 'tds':
-                trip_duration_stats(df)
-            elif select_data == 'us':
-                user_stats(df, city)
-            elif select_data == 'rd':
-                mark_place = raw_data(df, mark_place)
-            elif select_data == 'r':
-                break
+        time_stats(df)
+        station_stats(df)
+        trip_duration_stats(df)
+        user_stats(df)
+        display_data(df)
 
-        restart = choice("\nWould you like to restart?\n\n[y]Yes\n[n]No\n\n>")
-        if restart.lower() != 'y':
+        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        if restart.lower() != 'yes':
             break
+
 
 if __name__ == "__main__":
 	main()
